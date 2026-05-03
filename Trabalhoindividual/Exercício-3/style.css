@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.pagina {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  background-color: #000;
+  height: 50px;
+}
+
+.meio {
+  display: flex;
+}
+
+.lateral {
+  background-color: #f4a7c0;
+  width: 100px;
+}
+
+.direita {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo {
+  background-color: #e8dbb0;
+  height: 260px;
+}
+
+.rodape {
+  background-color: #a0714f;
+  height: 60px;
+}
