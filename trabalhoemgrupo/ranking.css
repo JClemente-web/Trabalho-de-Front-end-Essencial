@@ -23,7 +23,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── BACKGROUND PATTERN ── */
 body::before {
   content: '';
   position: fixed;
@@ -47,7 +46,6 @@ body::before {
   z-index: 0;
 }
 
-/* ── WRAPPER ── */
 .page-wrapper {
   position: relative;
   z-index: 1;
@@ -56,7 +54,6 @@ body::before {
   padding: 3rem 1.5rem 5rem;
 }
 
-/* ── HEADER ── */
 .page-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -122,7 +119,6 @@ body::before {
   border-radius: 50%;
 }
 
-/* ── CONTROLES ── */
 .controls {
   display: flex;
   flex-direction: column;
@@ -200,7 +196,6 @@ body::before {
   color: #fff;
 }
 
-/* ── CONTADOR ── */
 .count-bar {
   text-align: center;
   font-size: 0.82rem;
@@ -212,14 +207,12 @@ body::before {
   color: var(--amarelo);
 }
 
-/* ── GRID ── */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   gap: 16px;
 }
 
-/* ── CARD ── */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
@@ -246,7 +239,6 @@ body::before {
   box-shadow: 0 0 24px rgba(0, 146, 70, 0.2);
 }
 
-/* ── DESTAQUE BRASIL ── */
 .card.brasil {
   border-color: var(--verde);
   background: linear-gradient(160deg, #0d1f15 0%, #161616 100%);
@@ -270,7 +262,6 @@ body::before {
   text-align: center;
 }
 
-/* ── RANK BADGE ── */
 .rank-badge {
   position: absolute;
   top: 10px;
@@ -293,7 +284,6 @@ body::before {
 .rank-2 .rank-badge { background: #C0C0C0; color: #000; }
 .rank-3 .rank-badge { background: #CD7F32; color: #fff; }
 
-/* ── BANDEIRA ── */
 .flag-img {
   width: 68px;
   height: 46px;
@@ -305,7 +295,6 @@ body::before {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ── TEXTOS DO CARD ── */
 .team-name {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 1.05rem;
@@ -336,7 +325,6 @@ body::before {
   padding: 2px 8px;
 }
 
-/* ── ESTADO VAZIO ── */
 .empty-state {
   grid-column: 1 / -1;
   text-align: center;
@@ -349,7 +337,6 @@ body::before {
   margin-top: 0.5rem;
 }
 
-/* ── ANIMAÇÃO ── */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -361,7 +348,6 @@ body::before {
   }
 }
 
-/* ── RESPONSIVO ── */
 @media (max-width: 480px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
