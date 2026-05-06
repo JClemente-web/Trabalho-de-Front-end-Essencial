@@ -1,100 +1,84 @@
 const teams = [
-  // CONMEBOL (6)
-  { rank: 1,  name: "Argentina",        conf: "CONMEBOL", pts: 1896, flag: "https://flagcdn.com/w80/ar.png" },
-  { rank: 5,  name: "Brasil",           conf: "CONMEBOL", pts: 1782, flag: "https://flagcdn.com/w80/br.png", brasil: true },
-  { rank: 6,  name: "Uruguai",          conf: "CONMEBOL", pts: 1744, flag: "https://flagcdn.com/w80/uy.png" },
-  { rank: 13, name: "Colômbia",         conf: "CONMEBOL", pts: 1659, flag: "https://flagcdn.com/w80/co.png" },
-  { rank: 20, name: "Venezuela",        conf: "CONMEBOL", pts: 1564, flag: "https://flagcdn.com/w80/ve.png" },
-  { rank: 22, name: "Equador",          conf: "CONMEBOL", pts: 1547, flag: "https://flagcdn.com/w80/ec.png" },
+  { rank: 1, name: "França", conf: "UEFA", pts: 1877, flag: "https://flagcdn.com/w80/fr.png" },
+  { rank: 2, name: "Espanha", conf: "UEFA", pts: 1876, flag: "https://flagcdn.com/w80/es.png" },
+  { rank: 3, name: "Argentina", conf: "CONMEBOL", pts: 1874, flag: "https://flagcdn.com/w80/ar.png" },
+  { rank: 4, name: "Inglaterra", conf: "UEFA", pts: 1825, flag: "https://flagcdn.com/w80/gb-eng.png" },
+  { rank: 5, name: "Portugal", conf: "UEFA", pts: 1763, flag: "https://flagcdn.com/w80/pt.png" },
+  { rank: 6, name: "Brasil", conf: "CONMEBOL", pts: 1761, flag: "https://flagcdn.com/w80/br.png", brasil: true },
+  { rank: 7, name: "Holanda", conf: "UEFA", pts: 1757, flag: "https://flagcdn.com/w80/nl.png" },
+  { rank: 8, name: "Marrocos", conf: "CAF", pts: 1755, flag: "https://flagcdn.com/w80/ma.png" },
+  { rank: 9, name: "Bélgica", conf: "UEFA", pts: 1734, flag: "https://flagcdn.com/w80/be.png" },
+  { rank: 10, name: "Alemanha", conf: "UEFA", pts: 1730, flag: "https://flagcdn.com/w80/de.png" },
 
-  // UEFA (16)
-  { rank: 2,  name: "França",           conf: "UEFA",     pts: 1843, flag: "https://flagcdn.com/w80/fr.png" },
-  { rank: 3,  name: "Espanha",          conf: "UEFA",     pts: 1830, flag: "https://flagcdn.com/w80/es.png" },
-  { rank: 4,  name: "Inglaterra",       conf: "UEFA",     pts: 1793, flag: "https://flagcdn.com/w80/gb-eng.png" },
-  { rank: 7,  name: "Portugal",         conf: "UEFA",     pts: 1742, flag: "https://flagcdn.com/w80/pt.png" },
-  { rank: 8,  name: "Bélgica",          conf: "UEFA",     pts: 1737, flag: "https://flagcdn.com/w80/be.png" },
-  { rank: 9,  name: "Holanda",          conf: "UEFA",     pts: 1735, flag: "https://flagcdn.com/w80/nl.png" },
-  { rank: 10, name: "Alemanha",         conf: "UEFA",     pts: 1720, flag: "https://flagcdn.com/w80/de.png" },
-  { rank: 11, name: "Itália",           conf: "UEFA",     pts: 1710, flag: "https://flagcdn.com/w80/it.png" },
-  { rank: 12, name: "Croácia",          conf: "UEFA",     pts: 1680, flag: "https://flagcdn.com/w80/hr.png" },
-  { rank: 14, name: "Dinamarca",        conf: "UEFA",     pts: 1651, flag: "https://flagcdn.com/w80/dk.png" },
-  { rank: 15, name: "Áustria",          conf: "UEFA",     pts: 1636, flag: "https://flagcdn.com/w80/at.png" },
-  { rank: 17, name: "Suíça",            conf: "UEFA",     pts: 1620, flag: "https://flagcdn.com/w80/ch.png" },
-  { rank: 19, name: "Turquia",          conf: "UEFA",     pts: 1568, flag: "https://flagcdn.com/w80/tr.png" },
-  { rank: 21, name: "Escócia",          conf: "UEFA",     pts: 1560, flag: "https://flagcdn.com/w80/gb-sct.png" },
-  { rank: 23, name: "Hungria",          conf: "UEFA",     pts: 1540, flag: "https://flagcdn.com/w80/hu.png" },
-  { rank: 24, name: "Romênia",          conf: "UEFA",     pts: 1532, flag: "https://flagcdn.com/w80/ro.png" },
-  { rank: 25, name: "Eslováquia",       conf: "UEFA",     pts: 1528, flag: "https://flagcdn.com/w80/sk.png" },
-  { rank: 26, name: "Noruega",          conf: "UEFA",     pts: 1521, flag: "https://flagcdn.com/w80/no.png" },
-  { rank: 27, name: "Ucrânia",          conf: "UEFA",     pts: 1514, flag: "https://flagcdn.com/w80/ua.png" },
+  { rank: 11, name: "Croácia", conf: "UEFA", pts: 1717, flag: "https://flagcdn.com/w80/hr.png" },
+  { rank: 12, name: "Colômbia", conf: "CONMEBOL", pts: 1693, flag: "https://flagcdn.com/w80/co.png" },
+  { rank: 13, name: "Senegal", conf: "CAF", pts: 1688, flag: "https://flagcdn.com/w80/sn.png" },
+  { rank: 14, name: "México", conf: "CONCACAF", pts: 1681, flag: "https://flagcdn.com/w80/mx.png" },
+  { rank: 15, name: "EUA", conf: "CONCACAF", pts: 1673, flag: "https://flagcdn.com/w80/us.png" },
+  { rank: 16, name: "Uruguai", conf: "CONMEBOL", pts: 1673, flag: "https://flagcdn.com/w80/uy.png" },
 
-  // CAF (9)
-  { rank: 16, name: "Marrocos",         conf: "CAF",      pts: 1626, flag: "https://flagcdn.com/w80/ma.png" },
-  { rank: 28, name: "Senegal",          conf: "CAF",      pts: 1508, flag: "https://flagcdn.com/w80/sn.png" },
-  { rank: 29, name: "Egito",            conf: "CAF",      pts: 1499, flag: "https://flagcdn.com/w80/eg.png" },
-  { rank: 30, name: "Nigéria",          conf: "CAF",      pts: 1491, flag: "https://flagcdn.com/w80/ng.png" },
-  { rank: 31, name: "Camarões",         conf: "CAF",      pts: 1480, flag: "https://flagcdn.com/w80/cm.png" },
-  { rank: 32, name: "Mali",             conf: "CAF",      pts: 1471, flag: "https://flagcdn.com/w80/ml.png" },
-  { rank: 33, name: "Argélia",          conf: "CAF",      pts: 1463, flag: "https://flagcdn.com/w80/dz.png" },
-  { rank: 34, name: "Costa do Marfim",  conf: "CAF",      pts: 1455, flag: "https://flagcdn.com/w80/ci.png" },
-  { rank: 35, name: "África do Sul",    conf: "CAF",      pts: 1447, flag: "https://flagcdn.com/w80/za.png" },
+  { rank: 17, name: "Japão", conf: "AFC", pts: 1660, flag: "https://flagcdn.com/w80/jp.png" },
+  { rank: 18, name: "Suíça", conf: "UEFA", pts: 1655, flag: "https://flagcdn.com/w80/ch.png" },
+  { rank: 19, name: "Dinamarca", conf: "UEFA", pts: 1648, flag: "https://flagcdn.com/w80/dk.png" },
+  { rank: 20, name: "Irã", conf: "AFC", pts: 1640, flag: "https://flagcdn.com/w80/ir.png" },
+  { rank: 21, name: "Turquia", conf: "UEFA", pts: 1635, flag: "https://flagcdn.com/w80/tr.png" },
+  { rank: 22, name: "Equador", conf: "CONMEBOL", pts: 1628, flag: "https://flagcdn.com/w80/ec.png" },
 
-  // CONCACAF (6)
-  { rank: 18, name: "México",           conf: "CONCACAF", pts: 1608, flag: "https://flagcdn.com/w80/mx.png" },
-  { rank: 36, name: "EUA",              conf: "CONCACAF", pts: 1440, flag: "https://flagcdn.com/w80/us.png" },
-  { rank: 37, name: "Canadá",           conf: "CONCACAF", pts: 1432, flag: "https://flagcdn.com/w80/ca.png" },
-  { rank: 38, name: "Jamaica",          conf: "CONCACAF", pts: 1424, flag: "https://flagcdn.com/w80/jm.png" },
-  { rank: 39, name: "Honduras",         conf: "CONCACAF", pts: 1416, flag: "https://flagcdn.com/w80/hn.png" },
-  { rank: 40, name: "Haiti",            conf: "CONCACAF", pts: 1408, flag: "https://flagcdn.com/w80/ht.png" },
+  { rank: 23, name: "Áustria", conf: "UEFA", pts: 1620, flag: "https://flagcdn.com/w80/at.png" },
+  { rank: 24, name: "Coreia do Sul", conf: "AFC", pts: 1615, flag: "https://flagcdn.com/w80/kr.png" },
+  { rank: 25, name: "Nigéria", conf: "CAF", pts: 1608, flag: "https://flagcdn.com/w80/ng.png" },
+  { rank: 26, name: "Austrália", conf: "AFC", pts: 1600, flag: "https://flagcdn.com/w80/au.png" },
+  { rank: 27, name: "Argélia", conf: "CAF", pts: 1595, flag: "https://flagcdn.com/w80/dz.png" },
+  { rank: 28, name: "Egito", conf: "CAF", pts: 1588, flag: "https://flagcdn.com/w80/eg.png" },
 
-  // AFC (8)
-  { rank: 41, name: "Japão",            conf: "AFC",      pts: 1602, flag: "https://flagcdn.com/w80/jp.png" },
-  { rank: 42, name: "Coreia do Sul",    conf: "AFC",      pts: 1588, flag: "https://flagcdn.com/w80/kr.png" },
-  { rank: 43, name: "Irã",              conf: "AFC",      pts: 1574, flag: "https://flagcdn.com/w80/ir.png" },
-  { rank: 44, name: "Austrália",        conf: "AFC",      pts: 1560, flag: "https://flagcdn.com/w80/au.png" },
-  { rank: 45, name: "Arábia Saudita",   conf: "AFC",      pts: 1546, flag: "https://flagcdn.com/w80/sa.png" },
-  { rank: 46, name: "Qatar",            conf: "AFC",      pts: 1532, flag: "https://flagcdn.com/w80/qa.png" },
-  { rank: 47, name: "Uzbequistão",      conf: "AFC",      pts: 1518, flag: "https://flagcdn.com/w80/uz.png" },
-  { rank: 48, name: "Jordânia",         conf: "AFC",      pts: 1390, flag: "https://flagcdn.com/w80/jo.png" },
+  { rank: 29, name: "Canadá", conf: "CONCACAF", pts: 1580, flag: "https://flagcdn.com/w80/ca.png" },
+  { rank: 30, name: "Noruega", conf: "UEFA", pts: 1575, flag: "https://flagcdn.com/w80/no.png" },
+  { rank: 31, name: "Panamá", conf: "CONCACAF", pts: 1560, flag: "https://flagcdn.com/w80/pa.png" },
+  { rank: 32, name: "Costa do Marfim", conf: "CAF", pts: 1555, flag: "https://flagcdn.com/w80/ci.png" },
+  { rank: 33, name: "Suécia", conf: "UEFA", pts: 1530, flag: "https://flagcdn.com/w80/se.png" },
+  { rank: 34, name: "Paraguai", conf: "CONMEBOL", pts: 1520, flag: "https://flagcdn.com/w80/py.png" },
 
-  // OFC (1)
-  { rank: 48, name: "Nova Zelândia",    conf: "OFC",      pts: 1250, flag: "https://flagcdn.com/w80/nz.png" }
+  { rank: 35, name: "República Tcheca", conf: "UEFA", pts: 1515, flag: "https://flagcdn.com/w80/cz.png" },
+  { rank: 36, name: "Escócia", conf: "UEFA", pts: 1505, flag: "https://flagcdn.com/w80/gb-sct.png" },
+  { rank: 37, name: "Tunísia", conf: "CAF", pts: 1500, flag: "https://flagcdn.com/w80/tn.png" },
+  { rank: 38, name: "Camarões", conf: "CAF", pts: 1495, flag: "https://flagcdn.com/w80/cm.png" },
+  { rank: 39, name: "RD Congo", conf: "CAF", pts: 1490, flag: "https://flagcdn.com/w80/cd.png" },
+  { rank: 40, name: "Uzbequistão", conf: "AFC", pts: 1465, flag: "https://flagcdn.com/w80/uz.png" },
+
+  { rank: 41, name: "Catar", conf: "AFC", pts: 1440, flag: "https://flagcdn.com/w80/qa.png" },
+  { rank: 42, name: "Arábia Saudita", conf: "AFC", pts: 1435, flag: "https://flagcdn.com/w80/sa.png" },
+  { rank: 43, name: "Iraque", conf: "AFC", pts: 1430, flag: "https://flagcdn.com/w80/iq.png" },
+  { rank: 44, name: "África do Sul", conf: "CAF", pts: 1410, flag: "https://flagcdn.com/w80/za.png" },
+  { rank: 45, name: "Jordânia", conf: "AFC", pts: 1390, flag: "https://flagcdn.com/w80/jo.png" },
+  { rank: 46, name: "Cabo Verde", conf: "CAF", pts: 1350, flag: "https://flagcdn.com/w80/cv.png" },
+  { rank: 47, name: "Gana", conf: "CAF", pts: 1320, flag: "https://flagcdn.com/w80/gh.png" },
+  { rank: 48, name: "Nova Zelândia", conf: "OFC", pts: 1250, flag: "https://flagcdn.com/w80/nz.png" }
 ];
 
-// ── Elementos do DOM ──
-const grid        = document.getElementById('teams-grid');
+const grid = document.getElementById('teams-grid');
 const searchInput = document.getElementById('search-input');
-const filterBtns  = document.querySelectorAll('.filter-btn');
-const countEl     = document.getElementById('count');
+const filterBtns = document.querySelectorAll('.filter-btn');
+const countEl = document.getElementById('count');
 
 let activeFilter = 'all';
 
-// ── Label de continente ──
 function confLabel(conf) {
   const labels = {
     CONMEBOL: 'América do Sul',
-    UEFA:     'Europa',
-    CAF:      'África',
+    UEFA: 'Europa',
+    CAF: 'África',
     CONCACAF: 'Américas N/C',
-    AFC:      'Ásia',
-    OFC:      'Oceania'
+    AFC: 'Ásia',
+    OFC: 'Oceania'
   };
   return labels[conf] || conf;
 }
 
-// ── Renderiza os cards ──
 function buildCards(list) {
   grid.innerHTML = '';
 
   if (!list.length) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#444" stroke-width="1.5">
-          <circle cx="11" cy="11" r="8"/>
-          <path d="m21 21-4.35-4.35"/>
-        </svg>
-        <p>Nenhuma seleção encontrada.</p>
-      </div>`;
+    grid.innerHTML = '<div class="empty-state"><p>Nenhuma seleção encontrada.</p></div>';
     countEl.textContent = 0;
     return;
   }
@@ -108,7 +92,7 @@ function buildCards(list) {
 
     card.innerHTML =
       '<div class="rank-badge">#' + team.rank + '</div>' +
-      '<img class="flag-img" src="' + team.flag + '" alt="Bandeira ' + team.name + '" loading="lazy" />' +
+      '<img class="flag-img" src="' + team.flag + '" alt="' + team.name + '">' +
       '<div class="team-name">' + team.name + '</div>' +
       '<div class="continent-label">' + confLabel(team.conf) + '</div>' +
       '<div class="fifa-pts">' + team.pts.toLocaleString('pt-BR') + ' pts</div>';
@@ -117,7 +101,6 @@ function buildCards(list) {
   });
 }
 
-// ── Filtra e renderiza ──
 function render() {
   var list = teams.slice();
 
@@ -127,13 +110,12 @@ function render() {
 
   var query = searchInput.value.toLowerCase().trim();
   if (query) {
-    list = list.filter(function(t) { return t.name.toLowerCase().indexOf(query) !== -1; });
+    list = list.filter(function(t) { return t.name.toLowerCase().includes(query); });
   }
 
   buildCards(list);
 }
 
-// ── Eventos dos botões de filtro ──
 filterBtns.forEach(function(btn) {
   btn.addEventListener('click', function() {
     filterBtns.forEach(function(b) { b.classList.remove('active'); });
@@ -143,8 +125,6 @@ filterBtns.forEach(function(btn) {
   });
 });
 
-// ── Evento da busca ──
 searchInput.addEventListener('input', render);
 
-// ── Renderização inicial ──
 render();
